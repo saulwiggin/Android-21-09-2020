@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidMaterialTextFields</string>
+    <string name="hint_text">hint_text</string>
+</resources>
