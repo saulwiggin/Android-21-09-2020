@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".CreateActivity">
+
+
+    <ImageView
+        android:id="@+id/buttonCross2"
+        android:layout_width="51dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/email2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cross" />
+
+    <TextView
+        android:id="@+id/validemail"
+        android:layout_width="937dp"
+        android:layout_height="49dp"
+        android:text="Your passwords don't match"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/textView9"
+        app:layout_constraintEnd_toEndOf="@id/buttonCross2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/email2"
+        android:layout_width="410dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="1dp"
+        android:text="Create password:"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailValidaitionMessage" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="404dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="1dp"
+        android:text="Repeat Password:"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordrepeat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/emailedittext"
+        android:layout_width="408dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="3dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="enter email address"
+        android:inputType="textEmailAddress"
+        android:textColorHighlight="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toTopOf="@id/emailValidaitionMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailname" />
+
+    <TextView
+        android:id="@+id/createanaccount"
+        android:layout_width="298dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/museosans_500"
+        android:text="Create an account"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/cardview_light_background"
+        android:textColorLink="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="62dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintEnd_toStartOf="@+id/createanaccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/emailname"
+        android:layout_width="994dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:text="Email Address:"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="407dp"
+        android:layout_height="36dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="see criteria below"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordrepeat"
+        android:layout_width="407dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="repeat password here"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/validemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="410dp"
+        android:layout_height="105dp"
+        android:text="Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lower case letter. You can use special characters."
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Nextbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/Nextbutton" />
+
+    <ImageView
+        android:id="@+id/Nextbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/gradient_button_background" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Next"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/Nextbutton"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="566dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/Nextbutton"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emailValidaitionMessage"
+        android:layout_width="359dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="1dp"
+        android:text="An account already exists for this email address"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/email2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCross2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailedittext" />
+
+    <ImageView
+        android:id="@+id/buttonCross"
+        android:layout_width="44dp"
+        android:layout_height="51dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cross" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="414dp"
+        android:layout_height="17dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/emailname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createanaccount"
+        app:layout_constraintVertical_bias="0.952" />
+
+    <ImageView
+        android:id="@+id/emailtick"
+        android:layout_width="74dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="3dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailname"
+        app:srcCompat="@drawable/tick" />
+
+    <ImageView
+        android:id="@+id/passwordtick"
+        android:layout_width="63dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="3dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toEndOf="@+id/email2"
+        app:layout_constraintTop_toBottomOf="@+id/email2"
+        app:layout_constraintVertical_bias="0.833"
+        app:srcCompat="@drawable/tick" />
+
+    <ImageView
+        android:id="@+id/repeattick"
+        android:layout_width="45dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8"
+        app:srcCompat="@drawable/tick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
