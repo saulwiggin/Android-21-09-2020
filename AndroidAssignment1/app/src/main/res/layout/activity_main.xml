@@ -11,22 +11,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_margin="8dp"
         android:gravity="center"
         android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         tools:context=".MainActivity">
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:hint="Name">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="354dp"
+            android:layout_marginTop="30dp"
+
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="59dp"
+                android:layout_height="57dp"
+                app:srcCompat="@drawable/perm_identity_24px" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:hint="Name"
+                android:layout_width="203dp"
+                android:layout_height="44dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -34,29 +45,32 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/phone"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="273dp"
+            android:layout_width="358dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:hint="Phone">
+
+            <ImageView
+                android:id="@+id/phoneimage"
+                android:layout_width="53dp"
+                android:layout_height="46dp"
+                app:srcCompat="@drawable/phone_24px" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <Spinner
+                android:id="@+id/area_dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/area"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_text">
-
-            <AutoCompleteTextView
-                android:id="@+id/filled_exposed_dropdown"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="64dp"
+            android:layout_height="38dp"
+            app:srcCompat="@drawable/location_on_24px" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Address"
@@ -65,48 +79,43 @@
             android:layout_marginBottom="12dp"
             android:hint="Address">
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Postcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:hint="City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Postcode">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/City"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:hint="City">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/country"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_text">
-
-            <AutoCompleteTextView
-                android:id="@+id/country_menu_item"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Postcode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:hint="Postcode">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/countries_dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:hint="Country" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,27 +126,45 @@
             android:layout_marginBottom="12dp"
             android:hint="Email">
 
+            <ImageView
+                android:id="@+id/emailImage"
+                android:layout_width="72dp"
+                android:layout_height="53dp"
+                app:srcCompat="@drawable/email_24px" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/saveButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Save"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                />
-
-            <Button
-                android:id="@+id/nextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Next"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                />
-
         </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/cakeImage"
+            android:layout_width="74dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/cake_24px" />
+
+        <AutoCompleteTextView
+            android:id="@+id/dob"
+            android:layout_width="362dp"
+            android:layout_height="103dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Save"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/nextButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Next"
+            android:text="Next" />
+
     </LinearLayout>
 
 </ScrollView>

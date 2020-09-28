@@ -19,6 +19,12 @@
         <item name="cornerSize">16dp</item>
     </style>
 
+    <style name="float_left">
+        <item name="android:layout_width">364dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
 
 
 </resources>
