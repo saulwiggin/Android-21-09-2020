@@ -21,21 +21,24 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name"
+            android:id="@+id/name_field"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="354dp"
             android:layout_marginTop="30dp"
-
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="59dp"
+                android:layout_toRightOf="@id/name"
                 android:layout_height="57dp"
+                android:layout_alignBaseline="@id/name"
                 app:srcCompat="@drawable/perm_identity_24px" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:hint="Name"
+                android:id="@+id/name"
+                android:hint="name"
+                android:layout_alignBaseline="@id/imageView"
                 android:layout_width="203dp"
                 android:layout_height="44dp" />
 
@@ -43,8 +46,10 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phone"
+            android:id="@+id/phone_field"
+            android:padding="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:baselineAlignBottom="true"
             android:layout_width="358dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -54,33 +59,42 @@
                 android:id="@+id/phoneimage"
                 android:layout_width="53dp"
                 android:layout_height="46dp"
-                app:srcCompat="@drawable/phone_24px" />
+                android:baselineAlignBottom="true"
+                app:srcCompat="@drawable/phone_24px"
+                android:layout_alignBaseline="@id/phone"
+                />
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/area_dropdown"
+                android:baselineAlignBottom="true"
+                />
 
             <Spinner
                 android:id="@+id/area_dropdown"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp" />
+                android:layout_height="34dp"
+                android:baselineAlignBottom="true"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/image_location"
             android:layout_width="64dp"
             android:layout_height="38dp"
             app:srcCompat="@drawable/location_on_24px" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Address"
+            android:id="@+id/address_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:hint="Address">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Postcode"
+                android:id="@+id/postcode_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -88,13 +102,14 @@
                 android:hint="City">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/City"
+                android:id="@+id/city_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -102,12 +117,14 @@
                 android:hint="Postcode">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/postcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -120,7 +137,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Email"
+            android:id="@+id/email_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -133,6 +150,7 @@
                 app:srcCompat="@drawable/email_24px" />
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Android Assignment 1</string>
     <string name="hint_text"></string>
+    <string name="content_description_media"></string>
+    <string name="title"></string>
+    <string name="secondary_text"></string>
+    <string name="action_1"></string>
+    <string name="action_2"></string>
+    <string name="supporting_text"></string>
     <string-array name="countries_array">
         <item>England</item>
         <item>Ireland</item>

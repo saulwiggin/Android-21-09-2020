@@ -8,11 +8,13 @@
     android:orientation="vertical"
     tools:context=".ListView">
 
-    <ListView
-        android:id="@+id/list"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="100dp"
-        android:scrollbarSize="4dp" />
+        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </LinearLayout>
