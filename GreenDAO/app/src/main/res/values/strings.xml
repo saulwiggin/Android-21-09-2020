@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GreenDAO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_hint">Employee First Name</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="job_hint">Job Description</string>
+    <string name="employer_hint">Employer Name</string>
+</resources>
