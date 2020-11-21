@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PayWithBitcoin</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_fragment_label">This is the login</string>
+    <string name="first_fragment_label">This is the camera</string>
+    <string name="second_fragment_label">This is the exchange</string>
+    <string name="third_fragment_label">This is the market / purchase</string>
+</resources>

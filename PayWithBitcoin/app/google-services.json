@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "899515359805",
+    "firebase_url": "https://bitcoinchallengeapp.firebaseio.com",
+    "project_id": "bitcoinchallengeapp",
+    "storage_bucket": "bitcoinchallengeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899515359805:android:3bb616015c3a815dd1c054",
+        "android_client_info": {
+          "package_name": "com.example.paywithbitcoin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "899515359805-dui9gud0rf1rlvvj9akqnm8qoosjbfu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMObQJKTUvAzGpmvEY8jfieYoIVYnuwtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "899515359805-dui9gud0rf1rlvvj9akqnm8qoosjbfu5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

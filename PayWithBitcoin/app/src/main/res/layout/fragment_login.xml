@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            tools:showIn="@layout/fragment_login"
+            android:layout_height="match_parent" android:backgroundTintMode="add">
+        <Button
+                android:id="@+id/button"
+                android:text="Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="37dp" app:layout_constraintTop_toBottomOf="@+id/password"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:text="Username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/textInputLayout"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:backgroundTint="#FFFFFF">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="username"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="155dp" app:layout_constraintEnd_toEndOf="parent"
+                android:shadowColor="#FFFFFF" android:backgroundTint="#FFFFFF" android:textColor="#FFFFFF"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/textInputLayout2"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:backgroundTint="#FFFFFF">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/username" app:layout_constraintEnd_toEndOf="parent"
+                android:shadowColor="#FFFFFF" android:backgroundTintMode="add" android:backgroundTint="#FFFFFF"
+                android:textColor="#FFFFFF"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
