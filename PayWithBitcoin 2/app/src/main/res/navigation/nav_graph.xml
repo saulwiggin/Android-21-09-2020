@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/loginFragment">
+
+    <fragment android:id="@+id/firstFragment" android:name="com.example.paywithbitcoin.ui.dashboard.login.FirstFragment"
+              android:label="fragment_first" tools:layout="@layout/fragment_first">
+        <action android:id="@+id/action_firstFragment_to_barcodeFragment" app:destination="@id/barcodeFragment"/>
+        <action android:id="@+id/action_firstFragment_to_dashboardFragment" app:destination="@id/dashboardFragment"/>
+    </fragment>
+    <fragment android:id="@+id/loginFragment"
+              android:name="com.example.paywithbitcoin.ui.dashboard.login.ui.login.LoginFragment"
+              android:label="fragment_login" tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_loginFragment_to_firstFragment" app:destination="@id/firstFragment"/>
+    </fragment>
+    <fragment android:id="@+id/barcodeFragment"
+              android:name="com.example.paywithbitcoin.ui.dashboard.camera.BarcodeFragment"
+              android:label="fragment_barcode" tools:layout="@layout/fragment_barcode"/>
+    <fragment android:id="@+id/dashboardFragment"
+              android:name="com.example.paywithbitcoin.ui.dashboard.dashboard.DashboardFragment"
+              android:label="fragment_dashboard" tools:layout="@layout/fragment_dashboard"/>
+</navigation>
