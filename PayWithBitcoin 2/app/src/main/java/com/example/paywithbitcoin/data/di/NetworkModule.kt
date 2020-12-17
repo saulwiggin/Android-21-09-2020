@@ -47,7 +47,7 @@ val netModule = module {
 
     fun provideRetrofit(factory: Gson, client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(API.API_BASE_URL)
+            .baseUrl(API.COIN_GECKO_BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(factory))
             .addCallAdapterFactory(CoroutineCallAdapterFactory())

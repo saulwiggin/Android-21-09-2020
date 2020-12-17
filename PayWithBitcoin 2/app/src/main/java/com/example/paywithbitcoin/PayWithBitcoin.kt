@@ -12,9 +12,7 @@ import org.koin.core.logger.Level
 class PayWithBitcoin: Application(){
     override fun onCreate() {
         super.onCreate()
-        /**
-         * Start Koin
-         */
+
         startKoin {
             androidContext(this@PayWithBitcoin)
             androidLogger(Level.NONE)
