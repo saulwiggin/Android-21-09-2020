@@ -5,16 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.paywithbitcoin.R
-import com.example.paywithbitcoin.database.DatabaseBitcoin
-import com.example.paywithbitcoin.viewmodel.CurrencyViewModel
+import com.example.paywithbitcoin.ui.dashboard.dashboard.model.CurrencyState
+import com.example.paywithbitcoin.ui.dashboard.prices.CurrencyViewModel
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import org.koin.android.ext.android.inject
 import org.koin.ext.scope
-import timber.log.Timber
 
 class DashboardFragment : Fragment() {
 
@@ -40,9 +38,9 @@ class DashboardFragment : Fragment() {
          // setUpObserverToGetData()
 
         var currencyList = mutableListOf(
-            Currency("Bitcoin", true),
-            Currency("Litecoin", false),
-            Currency("Etherium", false)
+            CurrencyState("Bitcoin", true),
+            CurrencyState("Litecoin", false),
+            CurrencyState("Etherium", false)
         )
 
         val adapter = CurrencyAdapter(currencyList)
@@ -51,7 +49,7 @@ class DashboardFragment : Fragment() {
 
         btnCryptoButton.setOnClickListener {
             val title = etAddCrypto.text.toString()
-            val currency = Currency(title, false)
+            val currency = CurrencyState(title, false)
             currencyList.add(currency)
             adapter.notifyItemInserted(currencyList.size - 1)
         }

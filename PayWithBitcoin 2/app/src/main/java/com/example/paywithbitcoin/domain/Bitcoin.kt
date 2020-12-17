@@ -1,6 +1,5 @@
-package com.example.paywithbitcoin.dto
+package com.example.paywithbitcoin.domain
 
-import com.example.paywithbitcoin.database.DatabaseBitcoin
 import com.fasterxml.jackson.module.kotlin.*
 
 data class Bitcoin (

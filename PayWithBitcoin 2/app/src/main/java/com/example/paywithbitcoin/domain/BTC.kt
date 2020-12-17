@@ -1,4 +1,4 @@
-package com.example.paywithbitcoin.database
+package com.example.paywithbitcoin.domain
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

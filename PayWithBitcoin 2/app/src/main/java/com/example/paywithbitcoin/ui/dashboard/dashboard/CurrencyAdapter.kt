@@ -6,11 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.paywithbitcoin.R
 import com.example.paywithbitcoin.database.DatabaseBitcoin
+import com.example.paywithbitcoin.ui.dashboard.dashboard.model.CurrencyState
 import kotlinx.android.synthetic.main.row_currency.view.*
 
 class CurrencyAdapter(
 
-    var currencys: List<Currency>
+    var currencys: List<CurrencyState>
 
 ): RecyclerView.Adapter<CurrencyAdapter.CurrencyViewHolder>() {
     inner class CurrencyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

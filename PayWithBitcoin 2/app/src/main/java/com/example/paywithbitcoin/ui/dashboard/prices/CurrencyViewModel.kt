@@ -1,4 +1,4 @@
-package com.example.paywithbitcoin.viewmodel
+package com.example.paywithbitcoin.ui.dashboard.prices
 
 import android.util.Log
 import androidx.lifecycle.LiveData
