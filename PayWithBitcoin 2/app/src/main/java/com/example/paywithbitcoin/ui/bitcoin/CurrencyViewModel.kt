@@ -1,9 +1,11 @@
-package com.example.paywithbitcoin.ui.prices
+package com.example.paywithbitcoin.ui.bitcoin
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.example.paywithbitcoin.data.database.DatabaseBitcoin
+import com.example.paywithbitcoin.data.domain.BTC
+import com.example.paywithbitcoin.data.domain.model.ShitCoin
 import com.example.paywithbitcoin.data.repository.BitcoinRepository
 import kotlinx.coroutines.*
 
@@ -13,25 +15,12 @@ class CurrencyViewModel(private val bitcoinRepository: BitcoinRepository) : View
     private val viewModelJob = SupervisorJob()
     private val viewModelScope  = CoroutineScope(viewModelJob + Dispatchers.Main)
 
-    val currencyResults: LiveData<List<DatabaseBitcoin>> = bitcoinRepository.results
-    //val results: Flow<List<Currency>> = bitcoinRepository.pricesList
+    val currencyResults: LiveData<BTC> = bitcoinRepository.BTCInformation
 
     init {
         refreshFromRepository()
-        //refreshFromFlow()
     }
-//
-//    fun refreshFromFlow(){
-//        viewModelScope.launch {
-//            try {
-//                val results = bitcoinRepository.getDataFromFlow()
-//                Log.d(TAG, results.toString())
-//            }
-//            catch(networkError: Exception){
-//                Log.d(TAG, networkError.toString())
-//            }
-//        }
-//    }
+
 
     // Replace Live data with Flow
     fun refreshFromRepository(){

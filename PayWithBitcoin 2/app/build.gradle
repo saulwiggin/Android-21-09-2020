@@ -63,6 +63,11 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 }
 
 dependencies {
+    implementation ('org.apache.httpcomponents:httpclient-android:4.3.5'){
+        exclude group:'org.apache.httpcomponents:httpclient'
+        exclude group: 'org.apache.httpcomponents:httpcore'
+    }
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.11.+"

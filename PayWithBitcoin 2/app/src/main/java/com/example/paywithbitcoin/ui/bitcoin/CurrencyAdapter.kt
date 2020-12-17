@@ -1,4 +1,4 @@
-package com.example.paywithbitcoin.ui.dashboard
+package com.example.paywithbitcoin.ui.bitcoin
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.paywithbitcoin.R
 import com.example.paywithbitcoin.data.database.DatabaseBitcoin
-import com.example.paywithbitcoin.ui.dashboard.model.CurrencyState
+import com.example.paywithbitcoin.data.domain.model.ShitCoin
 import kotlinx.android.synthetic.main.row_currency.view.*
 
 class CurrencyAdapter(
 
-    var currencys: List<CurrencyState>
+    var currencys: List<ShitCoin>
 
 ): RecyclerView.Adapter<CurrencyAdapter.CurrencyViewHolder>() {
     inner class CurrencyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
@@ -30,8 +30,7 @@ class CurrencyAdapter(
 
     override fun onBindViewHolder(holder: CurrencyViewHolder, position: Int) {
         holder.itemView.apply {
-            tvTitle.text = currencys[position].title
-            Done.isChecked = currencys[position].isChecked
+            tvTitle.text = currencys[position].name
         }
     }
 

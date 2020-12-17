@@ -10,13 +10,8 @@ import android.widget.Toast
 import androidx.camera.core.*
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
-import com.example.paywithbitcoin.data.domain.ShitCoin
-import com.example.paywithbitcoin.data.network.CoinGeckoMapper
 import com.example.paywithbitcoin.ui.camera.QrCodeAnalyzer
-import dagger.hilt.android.AndroidEntryPoint
-import com.example.paywithbitcoin.data.database.CoinGeckoEntity
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     companion object {
@@ -71,6 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_CAMERA_PERMISSION) {
             if (isCameraPermissionGranted()) {
                 textureView.post { startCamera() }

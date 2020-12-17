@@ -1,4 +1,4 @@
-package com.example.paywithbitcoin.ui.dashboard
+package com.example.paywithbitcoin.ui.bitcoin
 
 import com.example.paywithbitcoin.data.database.DatabaseBitcoin
 

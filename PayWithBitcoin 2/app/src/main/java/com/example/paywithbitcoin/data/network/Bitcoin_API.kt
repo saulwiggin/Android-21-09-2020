@@ -2,8 +2,8 @@ package com.example.paywithbitcoin.data.network
 
 import com.example.paywithbitcoin.data.database.DatabaseBitcoin
 import com.example.paywithbitcoin.data.domain.BTC
-import com.example.paywithbitcoin.data.domain.ShitCoin
 import com.example.paywithbitcoin.data.network.constants.Coinlore
+import com.example.paywithbitcoin.data.network.model.ShitCoinDTO
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 
@@ -16,5 +16,5 @@ interface Bitcoin_API {
     fun getBTCPriceCoinLore(): Deferred<List<BTC>>
 
     @GET(API.COIN_LIST)
-    fun getListOfShitCoins(): Deferred<List<ShitCoin>>
+    fun getListOfShitCoins(): Deferred<List<ShitCoinDTO>>
 }
