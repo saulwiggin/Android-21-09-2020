@@ -11,6 +11,7 @@ class TradeFragment: Fragment() {
     @Override
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // set compose view here
     }
 
     @Override

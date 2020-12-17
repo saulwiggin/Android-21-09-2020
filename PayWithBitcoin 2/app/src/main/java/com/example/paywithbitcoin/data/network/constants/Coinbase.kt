@@ -1,4 +1,4 @@
-package com.example.paywithbitcoin.data.network
+package com.example.paywithbitcoin.data.network.constants
 
 object Coinbase {
     const val API_KEY ="8ArtrGv2UyiF2HV7"

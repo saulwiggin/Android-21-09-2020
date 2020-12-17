@@ -10,10 +10,11 @@ import android.widget.Toast
 import androidx.camera.core.*
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
+import com.example.paywithbitcoin.data.domain.ShitCoin
+import com.example.paywithbitcoin.data.network.CoinGeckoMapper
 import com.example.paywithbitcoin.ui.camera.QrCodeAnalyzer
 import dagger.hilt.android.AndroidEntryPoint
-import com.example.paywithbitcoin.data.network.Coinbase
-import okhttp3.OkHttpClient
+import com.example.paywithbitcoin.data.database.CoinGeckoEntity
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -24,17 +25,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var textureView: TextureView
 
-    private val CLIENT_ID = Coinbase.CLIENT_ID
-    private val CLIENT_SECRET = Coinbase.CLIENT_SECRET
-    private val REDIRECT_URI = Coinbase.REDIRECT_URI
-
-    private val TAG="Coinbase Wallet Authorization"
-
-    var client = OkHttpClient()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.AppTheme)
+
+        //place composable here
         setContentView(R.layout.activity_main)
 
     }
@@ -85,8 +81,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun onAuthorizationTask() : OkHttpClient {
-        return client
-    }
 
 }

@@ -1,4 +1,4 @@
-package com.example.paywithbitcoin.data.network
+package com.example.paywithbitcoin.data.network.constants
 
 object Binance {
     const val BASE_URL = "https://api.binance.com"

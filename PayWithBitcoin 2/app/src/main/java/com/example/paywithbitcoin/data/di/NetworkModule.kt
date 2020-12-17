@@ -3,9 +3,9 @@ package com.example.paywithbitcoin.data.di
 import android.app.Application
 import android.util.Log
 import com.example.paywithbitcoin.data.network.API
-import com.example.paywithbitcoin.data.network.Binance
-import com.example.paywithbitcoin.data.network.Coinbase
-import com.example.paywithbitcoin.data.network.Coinlore
+import com.example.paywithbitcoin.data.network.constants.Binance
+import com.example.paywithbitcoin.data.network.constants.Coinbase
+import com.example.paywithbitcoin.data.network.constants.Coinlore
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
