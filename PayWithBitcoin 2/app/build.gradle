@@ -32,7 +32,7 @@ android {
     buildFeatures{
         dataBinding = true
         viewBinding = true
-        compose = true
+        compose true
     }
 
     // Set both the Java and Kotlin compilers to target Java 8.
@@ -48,21 +48,34 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerVersion '1.4.20'
-        kotlinCompilerExtensionVersion '1.0.0-alpha08'
+        def kotlin_compiler_version = "1.4.0"
+        kotlinCompilerVersion kotlin_compiler_version
+        def kotlin_compiler_extension_version = "1.0.0-alpha05"
+        kotlinCompilerExtensionVersion kotlin_compiler_extension_version
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs += ["-Xallow-jvm-ir-dependencies", "-Xskip-prerelease-check"]
     }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -75,8 +88,8 @@ dependencies {
     implementation "androidx.camera:camera-core:${camerax_version}"
     implementation "androidx.camera:camera-camera2:${camerax_version}"
 
+    // Navigation
     def nav_version = "2.3.0"
-
     // Java language implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
@@ -124,10 +137,10 @@ dependencies {
     // Testing
     implementation "org.koin:koin-test:${koinVersion}"
 
-    // logging
+    // Logging
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
-    // TESTING
+    // Testing
     // Required -- JUnit 4 framework
     testImplementation 'junit:junit:4.12'
     // Optional -- Robolectric environment
@@ -137,6 +150,7 @@ dependencies {
     // test coroutines
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.0'
 
+    // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     //Dagger - Hilt
@@ -151,4 +165,17 @@ dependencies {
 
     // Coinbase Wallet
     implementation 'com.coinbase.android:coinbase-android-sdk:1.0.1'
+
+    // Compose
+    def compose = "1.0.0-alpha08"
+    implementation "androidx.compose.compiler:compiler:$compose"
+    implementation "androidx.compose.ui:ui:$compose"
+    implementation "androidx.compose.ui:ui-tooling:$compose"
+    implementation "androidx.compose.foundation:foundation:$compose"
+    implementation "androidx.compose.material:material:$compose"
+    implementation "androidx.compose.material:material-icons-core:$compose"
+    implementation "androidx.compose.material:material-icons-extended:$compose"
+    implementation "androidx.compose.runtime:runtime-livedata:$compose"
+    implementation "androidx.compose.runtime:runtime-rxjava2:$compose"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose"
 }
