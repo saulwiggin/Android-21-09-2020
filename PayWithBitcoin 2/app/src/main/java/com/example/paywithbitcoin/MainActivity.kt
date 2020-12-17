@@ -10,19 +10,10 @@ import android.widget.Toast
 import androidx.camera.core.*
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
-import com.coinbase.android.sdk.OAuth
-import com.example.paywithbitcoin.network.API
-import com.example.paywithbitcoin.ui.dashboard.camera.BarcodeFragment
-import com.example.paywithbitcoin.ui.dashboard.dashboard.DashboardFragment
-import com.example.paywithbitcoin.ui.dashboard.camera.QrCodeAnalyzer
-import com.example.paywithbitcoin.ui.dashboard.login.ui.login.LoginFragment
+import com.example.paywithbitcoin.ui.camera.QrCodeAnalyzer
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_first.*
-import com.coinbase.api.exception.CoinbaseException;
-import com.example.paywithbitcoin.network.Coinbase
+import com.example.paywithbitcoin.data.network.Coinbase
 import okhttp3.OkHttpClient
-import okhttp3.internal.concurrent.Task
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

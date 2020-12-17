@@ -1,7 +1,7 @@
 package com.example.paywithbitcoin
 
 import android.app.Application
-import com.example.paywithbitcoin.di.*
+import com.example.paywithbitcoin.data.di.*
 import dagger.hilt.android.HiltAndroidApp
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
