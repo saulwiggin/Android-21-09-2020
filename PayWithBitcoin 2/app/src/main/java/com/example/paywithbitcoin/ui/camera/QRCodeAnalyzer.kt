@@ -9,10 +9,10 @@ import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetectorOption
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
 
-class QrCodeAnalyzer(
+abstract class QrCodeAnalyzer(
     private val onQrCodesDetected: (qrCodes: List<FirebaseVisionBarcode>) -> Unit
 ) : ImageAnalysis.Analyzer {
-    override fun analyze(image: ImageProxy, rotationDegrees: Int) {
+    fun analyze(image: ImageProxy, rotationDegrees: Int) {
         val options = FirebaseVisionBarcodeDetectorOptions.Builder()
             // We want to only detect QR codes.
             .setBarcodeFormats(FirebaseVisionBarcode.FORMAT_QR_CODE)
@@ -32,6 +32,7 @@ class QrCodeAnalyzer(
             }
 
     }
+
     private fun rotationDegreesToFirebaseRotation(rotationDegrees: Int): Int {
         return when (rotationDegrees) {
             0 -> FirebaseVisionImageMetadata.ROTATION_0

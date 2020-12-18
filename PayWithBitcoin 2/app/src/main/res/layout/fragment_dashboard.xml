@@ -1,37 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   tools:context=".ui.dashboard.DashboardFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
 
     <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Currency Bitcoin Etherium" app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/textView" android:layout_marginBottom="44dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/rvCurrencys" app:layout_constraintStart_toStartOf="parent"
-            android:textSize="36sp"/>
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Currency Bitcoin Etherium"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvCurrencys"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
 
-            android:layout_width="0dp"
-            android:layout_height="0dp" android:id="@+id/rvCurrencys"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:layout_marginBottom="49dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/etAddCrypto" app:layout_constraintStart_toStartOf="parent"/>
+        android:id="@+id/rvCurrencys"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/etAddCrypto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="New Entry|"
-              android:id="@+id/etAddCrypto"
-              app:layout_constraintTop_toBottomOf="@+id/rvCurrencys" android:layout_marginEnd="15dp"
-              android:layout_marginBottom="22dp"
-              app:layout_constraintEnd_toEndOf="@+id/btnCryptoButton" app:layout_constraintBottom_toTopOf="@+id/btnCryptoButton"/>
+    <EditText
+        android:id="@+id/etAddCrypto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="22dp"
+        android:hint="New Entry|"
+        app:layout_constraintBottom_toTopOf="@+id/btnCryptoButton"
+        app:layout_constraintEnd_toEndOf="@+id/btnCryptoButton"
+        app:layout_constraintTop_toBottomOf="@+id/rvCurrencys" />
 
-    <Button android:layout_width="121dp" android:layout_height="67dp" android:text="Press Button"
-            android:id="@+id/btnCryptoButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="124dp"
-            app:layout_constraintTop_toBottomOf="@+id/etAddCrypto" android:layout_marginBottom="31dp"/>
+    <Button
+        android:id="@+id/btnCryptoButton"
+        android:layout_width="121dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="31dp"
+        android:text="Press Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddCrypto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

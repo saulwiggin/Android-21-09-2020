@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -75,6 +76,7 @@
             app:layout_constraintStart_toStartOf="@+id/password"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3"/>
+
     <ImageView
             android:src="@drawable/logo"
             android:layout_width="195dp"
@@ -85,6 +87,7 @@
             app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="1.0"
             app:layout_constraintBottom_toTopOf="@+id/textView3" android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"/>
+
     <TextView
             android:text="Error Message"
             android:layout_width="238dp"
@@ -95,4 +98,5 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="55dp"
             android:layout_marginEnd="55dp" app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

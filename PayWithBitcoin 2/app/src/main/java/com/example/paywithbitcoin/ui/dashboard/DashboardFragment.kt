@@ -8,12 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.paywithbitcoin.R
 import com.example.paywithbitcoin.data.domain.model.ShitCoin
-import com.example.paywithbitcoin.ui.bitcoin.CurrencyAdapter
 import com.example.paywithbitcoin.ui.dashboard.model.CurrencyState
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import org.koin.android.ext.android.inject
-import org.koin.ext.scope
 
 class DashboardFragment : Fragment() {
 
@@ -50,7 +48,6 @@ class DashboardFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        scope.close()
     }
 
 }
